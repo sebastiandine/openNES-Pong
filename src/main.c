@@ -1,20 +1,17 @@
 #include "lib_macros.h"
 #include "lib_macros.c"
 
+#include "structures.h"
+
 #include "ingame_two_player.h"
 
 #pragma bss-name(push, "ZEROPAGE")
 unsigned char oam_offset;
-unsigned char player1_pos_x;
-unsigned char player1_pos_y;
-unsigned char player1_score;
-unsigned char player2_pos_x;
-unsigned char player2_pos_y;
-unsigned char player2_score;
+static struct player_struct player1;
+static struct player_struct player2;
+static struct ball_struct ball;
+
 unsigned char flag_score;
-unsigned char ball_pos_x;
-unsigned char ball_pos_y;
-unsigned char ball_dir; //1 = right, 2 = left
 #pragma bss-name(pop)
 
 const unsigned char bg_palette[16]  =
@@ -33,9 +30,10 @@ const unsigned char sprite_palette[16]  =
 void main(void){
     oam_offset = 0;
 
-    player1_score = 0;
-    player2_score = 0;
-    ball_dir = 1;
+    player1.score = 0;
+    player2.score = 0;
+    ball.dir = RIGHT;
+
 
     ppu_turn_all_off();
     set_bg_palette(bg_palette);
@@ -43,50 +41,49 @@ void main(void){
     ppu_load_bg_palette();
     ppu_load_sprite_palette();
     ppu_draw_background(ingame_two_player, 'a');
-
     wait_Vblank();
     ppu_turn_all_on();
 
     while(1) {          //match-loop
-        player1_pos_x = 10;
-        player1_pos_y = 60;
-        player2_pos_x = 246;
-        player2_pos_y = 60;
-        ball_pos_y = 68;
-        ball_pos_x = 120;
+        player1.pos_x = 10;
+        player1.pos_y = 60;
+        player2.pos_x = 246;
+        player2.pos_y = 60;
+        ball.pos_x = 120;
+        ball.pos_y = 68;
 
         while (1) {     //score-loop
             wait_until_nmi();
 
             /* LOGIC */
             /* Score detection */
-            if(ball_pos_x < (player1_pos_x+8)){
+            if(ball.pos_x < (player1.pos_x+8)){
                 break;
             }
-            if(ball_pos_x > (player2_pos_x)){
+            if(ball.pos_x > (player2.pos_x)){
                 break;
             }
 
             /* paddle-hit detection */
-            if (ball_dir == 1) {
-                ++ball_pos_x;
-                if (ball_pos_x == (player2_pos_x - 8)) {
-                    if ((ball_pos_y + 8) > player2_pos_y) {           /* check if lowest point of ball is higher than highest
+            if (ball.dir == RIGHT) {
+                ++ball.pos_x;
+                if (ball.pos_x == (player2.pos_x - 8)) {
+                    if ((ball.pos_y + 8) > player2.pos_y) {           /* check if lowest point of ball is higher than highest
                                                                    point of paddle */
-                        if (ball_pos_y < (player2_pos_y + 24)) {        /* check if if highest point of all is lower than lowest
+                        if (ball.pos_y < (player2.pos_y + 24)) {        /* check if if highest point of all is lower than lowest
  *                                                                 point of paddle */
-                            ball_dir = 2;
+                            ball.dir = LEFT;
                         }
 
                     }
                 }
             }
-            if (ball_dir == 2) {
-                --ball_pos_x;
-                if (ball_pos_x == (player1_pos_x + 8)) {
-                    if ((ball_pos_y + 8) > player1_pos_y) {
-                        if (ball_pos_y < (player1_pos_y + 24)) {
-                            ball_dir = 1;
+            if (ball.dir == LEFT) {
+                --ball.pos_x;
+                if (ball.pos_x == (player1.pos_x + 8)) {
+                    if ((ball.pos_y + 8) > player1.pos_y) {
+                        if (ball.pos_y < (player1.pos_y + 24)) {
+                            ball.dir = 1;
                         }
                     }
                 }
@@ -95,45 +92,45 @@ void main(void){
             /* RENDER */
             oam_offset = 0;
             //player1
-            oam_offset = ppu_load_sprite_to_oam(player1_pos_x, player1_pos_y, 0x02, SPRITE_ATTR(0, 0, 0, 0),
+            oam_offset = ppu_load_sprite_to_oam(player1.pos_x, player1.pos_y, 0x02, SPRITE_ATTR(0, 0, 0, 0),
                                                 oam_offset);
-            oam_offset = ppu_load_sprite_to_oam(player1_pos_x, player1_pos_y + 8, 0x04, SPRITE_ATTR(0, 0, 0, 0),
+            oam_offset = ppu_load_sprite_to_oam(player1.pos_x, player1.pos_y + 8, 0x04, SPRITE_ATTR(0, 0, 0, 0),
                                                 oam_offset);
-            oam_offset = ppu_load_sprite_to_oam(player1_pos_x, player1_pos_y + 16, 0x03, SPRITE_ATTR(0, 0, 0, 0),
+            oam_offset = ppu_load_sprite_to_oam(player1.pos_x, player1.pos_y + 16, 0x03, SPRITE_ATTR(0, 0, 0, 0),
                                                 oam_offset);
             //player2
-            oam_offset = ppu_load_sprite_to_oam(player2_pos_x, player2_pos_y, 0x02, SPRITE_ATTR(0, 1, 0, 0),
+            oam_offset = ppu_load_sprite_to_oam(player2.pos_x, player2.pos_y, 0x02, SPRITE_ATTR(0, 1, 0, 0),
                                                 oam_offset);
-            oam_offset = ppu_load_sprite_to_oam(player2_pos_x, player2_pos_y + 8, 0x04, SPRITE_ATTR(0, 1, 0, 0),
+            oam_offset = ppu_load_sprite_to_oam(player2.pos_x, player2.pos_y + 8, 0x04, SPRITE_ATTR(0, 1, 0, 0),
                                                 oam_offset);
-            oam_offset = ppu_load_sprite_to_oam(player2_pos_x, player2_pos_y + 16, 0x03, SPRITE_ATTR(0, 1, 0, 0),
+            oam_offset = ppu_load_sprite_to_oam(player2.pos_x, player2.pos_y + 16, 0x03, SPRITE_ATTR(0, 1, 0, 0),
                                                 oam_offset);
             //ball
-            oam_offset = ppu_load_sprite_to_oam(ball_pos_x, ball_pos_y, 0x01, SPRITE_ATTR(0, 0, 0, 0), oam_offset);
+            oam_offset = ppu_load_sprite_to_oam(ball.pos_x, ball.pos_y, 0x01, SPRITE_ATTR(0, 0, 0, 0), oam_offset);
 
 
             /* INPUT */
             get_controller_input();
 
             if (gamepad_1 & DIR_UP) {
-                if (player1_pos_y > 32) {
-                    --player1_pos_y;
+                if (player1.pos_y > 32) {
+                    --player1.pos_y;
                 }
             }
             if (gamepad_1 & DIR_DOWN) {
-                if (player1_pos_y < 198) {
-                    ++player1_pos_y;
+                if (player1.pos_y < 198) {
+                    ++player1.pos_y;
                 }
             }
 
             if (gamepad_2 & DIR_UP) {
-                if (player2_pos_y > 32) {
-                    --player2_pos_y;
+                if (player2.pos_y > 32) {
+                    --player2.pos_y;
                 }
             }
             if (gamepad_2 & DIR_DOWN) {
-                if (player2_pos_y < 198) {
-                    ++player2_pos_y;
+                if (player2.pos_y < 198) {
+                    ++player2.pos_y;
                 }
             }
 
