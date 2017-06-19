@@ -1,4 +1,10 @@
-#include "lib_macros.h"
+/**
+ * @file nes_hw_functionalities.c
+ * @brief Implementation of C functions, declared within file @link nes_hw_functionalites.h @endlink.
+ * @author Sebastian Dine
+ */
+
+#include "nes_hw_functionalities.h"
 
 void wait_until_nmi(void){
 	while(nmi_flag == 0);
@@ -27,18 +33,6 @@ void ppu_reset_scroll(void){
 	PPU_SCROLL = 0;		/* set scroll y_position to 0 */
 }
 
-
-//void ppu_load_bg_palette(void) {
-//    PPU_ADDRESS = MSB(0x3f00);    /* set address register to $3f00 */
-//    PPU_ADDRESS = LSB(0x3f00);
-//
-//
-//    /* write array bg_pallete to PPU RAM. PPU_ADDRESS will be
-//       incremented automatically during the write process */
-//    for (index = 0; index < sizeof(ppu_bg_palette); ++index) {
-//        PPU_DATA = ppu_bg_palette[index];
-//    }
-//}
 void ppu_load_bg_palette(void) {
     PPU_ADDRESS = MSB(0x3f00);
     PPU_ADDRESS = LSB(0x3f00);
@@ -114,9 +108,9 @@ void set_sprite_palette(const unsigned char *new_sprite_palette){
 void ppu_draw_background(const unsigned char *bg, unsigned char nametable){
     switch(nametable){
         case 'a' : PPU_ADDRESS = MSB(NAMETABLE_A) ; PPU_ADDRESS = LSB(NAMETABLE_A); break;
-        case 'b' : PPU_ADDRESS = MSB(NAMETABLE_A) ; PPU_ADDRESS = LSB(NAMETABLE_A); break;
-        case 'c' : PPU_ADDRESS = MSB(NAMETABLE_A) ; PPU_ADDRESS = LSB(NAMETABLE_A); break;
-        case 'd' : PPU_ADDRESS = MSB(NAMETABLE_A) ; PPU_ADDRESS = LSB(NAMETABLE_A); break;
+        case 'b' : PPU_ADDRESS = MSB(NAMETABLE_B) ; PPU_ADDRESS = LSB(NAMETABLE_B); break;
+        case 'c' : PPU_ADDRESS = MSB(NAMETABLE_C) ; PPU_ADDRESS = LSB(NAMETABLE_C); break;
+        case 'd' : PPU_ADDRESS = MSB(NAMETABLE_D) ; PPU_ADDRESS = LSB(NAMETABLE_D); break;
         default : PPU_ADDRESS = MSB(NAMETABLE_A) ; PPU_ADDRESS = LSB(NAMETABLE_A);
     }
     unpack_RLE(bg);

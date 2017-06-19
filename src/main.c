@@ -1,5 +1,5 @@
-#include "lib_macros.h"
-#include "lib_macros.c"
+#include "nes_hw_functionalities.h"
+#include "nes_hw_functionalities.c"
 
 #include "structures.h"
 #include "globals.h"
