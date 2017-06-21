@@ -1,6 +1,7 @@
 #pragma bss-name(push, "ZEROPAGE")
 unsigned char oam_offset;
 unsigned char flag_score;
+unsigned char flag_wall_hit;
 unsigned char score_loop;
 
 static struct player_struct player1;

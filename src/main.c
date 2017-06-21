@@ -14,10 +14,14 @@
 void main(void){
     oam_offset = 0;
     flag_score = 0;
+    flag_wall_hit = 0;
 
     player1.score = 0;
     player2.score = 0;
+
     ball.dir = RIGHT;
+    ball.angle = HORZ;
+    ball.angle_dir = UP;
 
     ppu_turn_all_off();
     set_bg_palette(bg_palette);
@@ -29,12 +33,13 @@ void main(void){
     ppu_turn_all_on();
 
     while(1) {          //match-loop
-        player1.pos_x = 10;
+        player1.pos_x = 2;
         player1.pos_y = 60;
         player2.pos_x = 246;
         player2.pos_y = 60;
         ball.pos_x = 120;
         ball.pos_y = 68;
+        ball.angle = HORZ;
         score_loop = 1;
 
         while (score_loop) {
