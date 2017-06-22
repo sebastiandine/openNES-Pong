@@ -1,3 +1,13 @@
+/**
+ * @file structures.h
+ * @brief This file defines structures of the ball and players. It also contains
+ *          special enums for elements of those two structures.
+ * @author Sebastian Dine
+ */
+
+/**
+ * @brief This enum defines the movement direction of the ball.
+ */
 enum ball_dir {RIGHT=1, LEFT=2};
 
 /**
@@ -11,14 +21,23 @@ enum ball_dir {RIGHT=1, LEFT=2};
  */
 enum ball_angle {HORZ=0, MIN=1, MID=2, MAX=4};
 
+/**
+ * @brief This enum defines, if the current @link ball_struct.angle @endlink is positive or negative.
+ */
 enum ball_angle_dir {UP=1, DOWN=2};
 
+/**
+ * @brief This structs represents a players position and score .
+ */
 typedef struct player_struct{
     unsigned char pos_x;
     unsigned char pos_y;
     unsigned char score;
 };
 
+/**
+ * @brief This structs represents a balls position and movement parameters.
+ */
 typedef struct ball_struct{
     unsigned char pos_x;
     unsigned char pos_y;

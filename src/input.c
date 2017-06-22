@@ -1,6 +1,15 @@
+/**
+ * @file input.c
+ * @brief This file contains the gamepad input handling of the game.
+ * @author Sebastian Dine
+ */
 
-void mainloop_input(){
-    get_controller_input();
+/**
+ * @brief This function provides the input handling of gamepad1.
+ * Make sure function @link get_controller_input() @endlink has been called before this function.
+ * Make also sure that you call function @link get_controller_input() @endlink  only once per frame.
+ */
+void gamepad1_input_handling(void){
 
     if (gamepad_1 & DIR_UP) {
         if (player1.pos_y > 32) {
@@ -12,6 +21,14 @@ void mainloop_input(){
             player1.pos_y += 2;
         }
     }
+}
+
+/**
+ * @brief This function provides the input handling of gamepad2.
+ * Make sure function @link get_controller_input() @endlink has been called before this function.
+ * Make also sure that you call function @link get_controller_input() @endlink  only once per frame.
+ */
+void gamepad2_input_handling(void){
 
     if (gamepad_2 & DIR_UP) {
         if (player2.pos_y > 32) {
@@ -23,4 +40,16 @@ void mainloop_input(){
             player2.pos_y += 2;
         }
     }
+}
+
+/**
+ * @brief This function orchestrates all input handling functions and encapsulates them to the main loop.
+ */
+void mainloop_input(void){
+    get_controller_input();
+
+    gamepad1_input_handling();
+    gamepad2_input_handling();
+
+
 }

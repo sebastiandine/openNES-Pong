@@ -87,20 +87,26 @@ $(document).ready(function(){initNavTree('structures_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>This file defines structures of the ball and players. It also contains special enums for elements of those two structures.  
+<a href="#details">More...</a></p>
+
 <p><a href="structures_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplayer__struct.html">player_struct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structs represents a players position and score .  <a href="structplayer__struct.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structball__struct.html">ball_struct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structs represents a balls position and movement parameters.  <a href="structball__struct.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ae465566298bc6a2c71a6eed4afb8171f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structures_8h.html#ae465566298bc6a2c71a6eed4afb8171f">ball_dir</a> { <a class="el" href="structures_8h.html#ae465566298bc6a2c71a6eed4afb8171faec8379af7490bb9eaaf579cf17876f38">RIGHT</a> =1, 
 <a class="el" href="structures_8h.html#ae465566298bc6a2c71a6eed4afb8171fadb45120aafd37a973140edee24708065">LEFT</a> =2
- }</td></tr>
+ }<tr class="memdesc:ae465566298bc6a2c71a6eed4afb8171f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum defines the movement direction of the ball.  <a href="structures_8h.html#ae465566298bc6a2c71a6eed4afb8171f">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:ae465566298bc6a2c71a6eed4afb8171f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2aa9e109e68c204e4dc6390b7bb10f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10f">ball_angle</a> { <a class="el" href="structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10fac1f299c3dbb6b13bf62d01911d470055">HORZ</a> =0, 
 <a class="el" href="structures_8h.html#a4a2aa9e109e68c204e4dc6390b7bb10fa957e8250f68e7b5677b22397c2c1b51e">MIN</a> =1, 
@@ -116,10 +122,14 @@ Enumerations</h2></td></tr>
 <tr class="separator:a4a2aa9e109e68c204e4dc6390b7bb10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace937d1c5584c13ffd4a13ffeb77c810"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structures_8h.html#ace937d1c5584c13ffd4a13ffeb77c810">ball_angle_dir</a> { <a class="el" href="structures_8h.html#ace937d1c5584c13ffd4a13ffeb77c810aba595d8bca8bc5e67c37c0a9d89becfa">UP</a> =1, 
 <a class="el" href="structures_8h.html#ace937d1c5584c13ffd4a13ffeb77c810a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a> =2
- }</td></tr>
+ }<tr class="memdesc:ace937d1c5584c13ffd4a13ffeb77c810"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enum defines, if the current <a class="el" href="structball__struct.html#ad2886fb42fc8b4545d8ec4b70a97066f">ball_struct.angle</a> is positive or negative.  <a href="structures_8h.html#ace937d1c5584c13ffd4a13ffeb77c810">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:ace937d1c5584c13ffd4a13ffeb77c810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file defines structures of the ball and players. It also contains special enums for elements of those two structures. </p>
+<dl class="section author"><dt>Author</dt><dd>Sebastian Dine </dd></dl>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a4a2aa9e109e68c204e4dc6390b7bb10f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a2aa9e109e68c204e4dc6390b7bb10f">&#9670;&nbsp;</a></span>ball_angle</h2>
 
@@ -158,6 +168,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This enum defines, if the current <a class="el" href="structball__struct.html#ad2886fb42fc8b4545d8ec4b70a97066f">ball_struct.angle</a> is positive or negative. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ace937d1c5584c13ffd4a13ffeb77c810aba595d8bca8bc5e67c37c0a9d89becfa"></a>UP&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ace937d1c5584c13ffd4a13ffeb77c810a9b0b4a95b99523966e0e34ffdadac9da"></a>DOWN&#160;</td><td class="fielddoc"></td></tr>
@@ -176,6 +188,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This enum defines the movement direction of the ball. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae465566298bc6a2c71a6eed4afb8171faec8379af7490bb9eaaf579cf17876f38"></a>RIGHT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ae465566298bc6a2c71a6eed4afb8171fadb45120aafd37a973140edee24708065"></a>LEFT&#160;</td><td class="fielddoc"></td></tr>

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['gamepad1_5finput_5fhandling',['gamepad1_input_handling',['../input_8c.html#a4e14484dd443365f11eff48e4c7d3bbd',1,'input.c']]],
+  ['gamepad2_5finput_5fhandling',['gamepad2_input_handling',['../input_8c.html#a226d03896df43a92b70afcb62230debd',1,'input.c']]],
   ['gamepad_5f1',['gamepad_1',['../nes__hw__functionalities_8h.html#a8285b7effb12ece2ab49970350288760',1,'nes_hw_functionalities.h']]],
   ['gamepad_5f1_5fold',['gamepad_1_old',['../nes__hw__functionalities_8h.html#a4b95e3b39d25a63deb8e53276d584955',1,'nes_hw_functionalities.h']]],
   ['gamepad_5f1_5ftest',['gamepad_1_test',['../nes__hw__functionalities_8h.html#a7ab1d5584f1fcc61db4ce1639bbfa24e',1,'nes_hw_functionalities.h']]],

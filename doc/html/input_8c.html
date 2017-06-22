@@ -85,15 +85,86 @@ $(document).ready(function(){initNavTree('input_8c.html','');});
 <div class="title">input.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This file contains the gamepad input handling of the game.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af949c3bd97c860e50531725b2a32c15c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8c.html#af949c3bd97c860e50531725b2a32c15c">mainloop_input</a> ()</td></tr>
-<tr class="separator:af949c3bd97c860e50531725b2a32c15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e14484dd443365f11eff48e4c7d3bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8c.html#a4e14484dd443365f11eff48e4c7d3bbd">gamepad1_input_handling</a> (void)</td></tr>
+<tr class="memdesc:a4e14484dd443365f11eff48e4c7d3bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function provides the input handling of gamepad1. Make sure function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> has been called before this function. Make also sure that you call function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> only once per frame.  <a href="#a4e14484dd443365f11eff48e4c7d3bbd">More...</a><br /></td></tr>
+<tr class="separator:a4e14484dd443365f11eff48e4c7d3bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226d03896df43a92b70afcb62230debd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8c.html#a226d03896df43a92b70afcb62230debd">gamepad2_input_handling</a> (void)</td></tr>
+<tr class="memdesc:a226d03896df43a92b70afcb62230debd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function provides the input handling of gamepad2. Make sure function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> has been called before this function. Make also sure that you call function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> only once per frame.  <a href="#a226d03896df43a92b70afcb62230debd">More...</a><br /></td></tr>
+<tr class="separator:a226d03896df43a92b70afcb62230debd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead3a23bfbe8bc1f6e73cf1ae0cd5876"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="input_8c.html#aead3a23bfbe8bc1f6e73cf1ae0cd5876">mainloop_input</a> (void)</td></tr>
+<tr class="memdesc:aead3a23bfbe8bc1f6e73cf1ae0cd5876"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function orchestrates all input handling functions and encapsulates them to the main loop.  <a href="#aead3a23bfbe8bc1f6e73cf1ae0cd5876">More...</a><br /></td></tr>
+<tr class="separator:aead3a23bfbe8bc1f6e73cf1ae0cd5876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="af949c3bd97c860e50531725b2a32c15c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af949c3bd97c860e50531725b2a32c15c">&#9670;&nbsp;</a></span>mainloop_input()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file contains the gamepad input handling of the game. </p>
+<dl class="section author"><dt>Author</dt><dd>Sebastian Dine </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4e14484dd443365f11eff48e4c7d3bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e14484dd443365f11eff48e4c7d3bbd">&#9670;&nbsp;</a></span>gamepad1_input_handling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gamepad1_input_handling </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function provides the input handling of gamepad1. Make sure function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> has been called before this function. Make also sure that you call function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> only once per frame. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="input_8c_a4e14484dd443365f11eff48e4c7d3bbd_icgraph.png" border="0" usemap="#input_8c_a4e14484dd443365f11eff48e4c7d3bbd_icgraph" alt=""/></div>
+<map name="input_8c_a4e14484dd443365f11eff48e4c7d3bbd_icgraph" id="input_8c_a4e14484dd443365f11eff48e4c7d3bbd_icgraph">
+<area shape="rect" id="node2" href="input_8c.html#aead3a23bfbe8bc1f6e73cf1ae0cd5876" title="This function orchestrates all input handling functions and encapsulates them to the main loop..." alt="" coords="225,5,335,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="383,5,433,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a226d03896df43a92b70afcb62230debd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226d03896df43a92b70afcb62230debd">&#9670;&nbsp;</a></span>gamepad2_input_handling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gamepad2_input_handling </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function provides the input handling of gamepad2. Make sure function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> has been called before this function. Make also sure that you call function <a class="el" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e">get_controller_input()</a> only once per frame. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="input_8c_a226d03896df43a92b70afcb62230debd_icgraph.png" border="0" usemap="#input_8c_a226d03896df43a92b70afcb62230debd_icgraph" alt=""/></div>
+<map name="input_8c_a226d03896df43a92b70afcb62230debd_icgraph" id="input_8c_a226d03896df43a92b70afcb62230debd_icgraph">
+<area shape="rect" id="node2" href="input_8c.html#aead3a23bfbe8bc1f6e73cf1ae0cd5876" title="This function orchestrates all input handling functions and encapsulates them to the main loop..." alt="" coords="225,5,335,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="383,5,433,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aead3a23bfbe8bc1f6e73cf1ae0cd5876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead3a23bfbe8bc1f6e73cf1ae0cd5876">&#9670;&nbsp;</a></span>mainloop_input()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -101,24 +172,29 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void mainloop_input </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function orchestrates all input handling functions and encapsulates them to the main loop. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="input_8c_af949c3bd97c860e50531725b2a32c15c_cgraph.png" border="0" usemap="#input_8c_af949c3bd97c860e50531725b2a32c15c_cgraph" alt=""/></div>
-<map name="input_8c_af949c3bd97c860e50531725b2a32c15c_cgraph" id="input_8c_af949c3bd97c860e50531725b2a32c15c_cgraph">
-<area shape="rect" id="node2" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e" title="This function reads controller ports and stores the result into globals gamepad_1 and gamepad_2 ..." alt="" coords="163,5,297,32"/>
+<div class="center"><img src="input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_cgraph.png" border="0" usemap="#input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_cgraph" alt=""/></div>
+<map name="input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_cgraph" id="input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_cgraph">
+<area shape="rect" id="node2" href="nes__hw__functionalities_8h.html#a4cfb1ded0707337c2fc5b5d31bf8078e" title="This function reads controller ports and stores the result into globals gamepad_1 and gamepad_2 ..." alt="" coords="181,5,316,32"/>
+<area shape="rect" id="node3" href="input_8c.html#a4e14484dd443365f11eff48e4c7d3bbd" title="This function provides the input handling of gamepad1. Make sure function get_controller_input() has ..." alt="" coords="163,56,335,83"/>
+<area shape="rect" id="node4" href="input_8c.html#a226d03896df43a92b70afcb62230debd" title="This function provides the input handling of gamepad2. Make sure function get_controller_input() has ..." alt="" coords="163,107,335,133"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="input_8c_af949c3bd97c860e50531725b2a32c15c_icgraph.png" border="0" usemap="#input_8c_af949c3bd97c860e50531725b2a32c15c_icgraph" alt=""/></div>
-<map name="input_8c_af949c3bd97c860e50531725b2a32c15c_icgraph" id="input_8c_af949c3bd97c860e50531725b2a32c15c_icgraph">
+<div class="center"><img src="input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_icgraph.png" border="0" usemap="#input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_icgraph" alt=""/></div>
+<map name="input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_icgraph" id="input_8c_aead3a23bfbe8bc1f6e73cf1ae0cd5876_icgraph">
 <area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="163,5,213,32"/>
 </map>
 </div>

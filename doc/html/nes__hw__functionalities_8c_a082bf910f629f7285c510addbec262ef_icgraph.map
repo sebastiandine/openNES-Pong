@@ -1,4 +1,6 @@
 <map id="ppu_load_sprite_to_oam" name="ppu_load_sprite_to_oam">
-<area shape="rect" id="node2" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="mainloop_render" alt="" coords="216,5,333,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="381,5,432,32"/>
+<area shape="rect" id="node2" href="$render_8c.html#afa1b85bcd414f986dc63cfc32f6ff2a9" title="This function renders player1 and player2 as sprites to the screen. " alt="" coords="216,5,323,32"/>
+<area shape="rect" id="node5" href="$render_8c.html#a5240636f9b79ed7294e04a004f4c881e" title="This function renders the ball as a sprites to the screen. " alt="" coords="227,56,312,83"/>
+<area shape="rect" id="node3" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="371,31,488,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="536,31,587,57"/>
 </map>
