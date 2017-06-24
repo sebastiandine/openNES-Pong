@@ -216,6 +216,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a5abc5420a7f15af7410173395b610ea8"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a5abc5420a7f15af7410173395b610ea8">index</a></td></tr>
 <tr class="memdesc:a5abc5420a7f15af7410173395b610ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">General variable for any loop purpose.  <a href="#a5abc5420a7f15af7410173395b610ea8">More...</a><br /></td></tr>
 <tr class="separator:a5abc5420a7f15af7410173395b610ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af991639de0a899b83418865d449fdb9e"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#af991639de0a899b83418865d449fdb9e">oam_offset</a></td></tr>
+<tr class="memdesc:af991639de0a899b83418865d449fdb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">OAM offset for next sprite to render. See <a class="el" href="nes__hw__functionalities_8h.html#a082bf910f629f7285c510addbec262ef">ppu_load_sprite_to_oam</a> for instructions on how to use this global.  <a href="#af991639de0a899b83418865d449fdb9e">More...</a><br /></td></tr>
+<tr class="separator:af991639de0a899b83418865d449fdb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554e1dac83bafd7612e03ac0ece3a52d"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a554e1dac83bafd7612e03ac0ece3a52d">ppu_oam</a> [256]</td></tr>
 <tr class="memdesc:a554e1dac83bafd7612e03ac0ece3a52d"><td class="mdescLeft">&#160;</td><td class="mdescRight">PPU OAM storage for sprites. See file 'config/nes.cfg' for definition of 'OAM' space.  <a href="#a554e1dac83bafd7612e03ac0ece3a52d">More...</a><br /></td></tr>
 <tr class="separator:a554e1dac83bafd7612e03ac0ece3a52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1340,6 +1343,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Indicator, if VBlank is reached resp. NMI interrupt is triggered. </p>
+
+</div>
+</div>
+<a id="af991639de0a899b83418865d449fdb9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af991639de0a899b83418865d449fdb9e">&#9670;&nbsp;</a></span>oam_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char oam_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OAM offset for next sprite to render. See <a class="el" href="nes__hw__functionalities_8h.html#a082bf910f629f7285c510addbec262ef">ppu_load_sprite_to_oam</a> for instructions on how to use this global. </p>
 
 </div>
 </div>

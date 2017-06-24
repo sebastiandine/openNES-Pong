@@ -68,7 +68,6 @@ void mainloop_render(void){
     /* render background */
     if(flag_score){
         render_score();
-        flag_score = 0;
     }
 
     /* render sprites */

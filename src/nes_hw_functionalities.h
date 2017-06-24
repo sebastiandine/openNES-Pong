@@ -99,6 +99,12 @@ unsigned char frm_count;
 unsigned char index;
 
 /**
+ * @brief OAM offset for next sprite to render. See @link ppu_load_sprite_to_oam @endlink for instructions
+ * on how to use this global.
+ */
+unsigned char oam_offset;
+
+/**
  * @name Gamepad 1 variables.
  * In the games C code, in most cases only @link gamepad_1 @endlink is required.
  * All other variables are mostly used by the assembly code of function

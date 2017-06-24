@@ -50,6 +50,7 @@ var nes__hw__functionalities_8h =
     [ "gamepad_2_test", "nes__hw__functionalities_8h.html#a576240ea874939fe615c81c341cb47de", null ],
     [ "index", "nes__hw__functionalities_8h.html#a5abc5420a7f15af7410173395b610ea8", null ],
     [ "nmi_flag", "nes__hw__functionalities_8h.html#ab8b8dca4a981215f764d8fa3a5da7130", null ],
+    [ "oam_offset", "nes__hw__functionalities_8h.html#af991639de0a899b83418865d449fdb9e", null ],
     [ "ppu_bg_palette", "nes__hw__functionalities_8h.html#a0b45cdc78ea3064d68498a055f0cdfdb", null ],
     [ "ppu_oam", "nes__hw__functionalities_8h.html#a554e1dac83bafd7612e03ac0ece3a52d", null ],
     [ "ppu_sprite_palette", "nes__hw__functionalities_8h.html#a0b95bbe94125150eb6548fa4412af30a", null ]

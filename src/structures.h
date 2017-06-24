@@ -27,12 +27,13 @@ enum ball_angle {HORZ=0, MIN=1, MID=2, MAX=4};
 enum ball_angle_dir {UP=1, DOWN=2};
 
 /**
- * @brief This structs represents a players position and score .
+ * @brief This structs represents a players position, score and pause flag .
  */
 typedef struct player_struct{
     unsigned char pos_x;
     unsigned char pos_y;
     unsigned char score;
+    unsigned char pause;
 };
 
 /**

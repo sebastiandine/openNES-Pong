@@ -11,16 +11,32 @@
  */
 void gamepad1_input_handling(void){
 
-    if (gamepad_1 & DIR_UP) {
-        if (player1.pos_y > 32) {
-            player1.pos_y -= 2;
+
+    if(gamepad_1 & START){
+        if(!flag_start_pressed) {
+           player1.pause = !player1.pause;
+            flag_start_pressed = 1;
+        }
+
+    }
+    else{
+        flag_start_pressed = 0;
+    }
+
+
+    if(!player1.pause && !player2.pause){       /* make sure that position cannot be changed during pause */
+        if (gamepad_1 & DIR_UP) {
+            if (player1.pos_y > 32) {
+                player1.pos_y -= 2;
+            }
+        }
+        if (gamepad_1 & DIR_DOWN) {
+            if (player1.pos_y < 198) {
+                player1.pos_y += 2;
+            }
         }
     }
-    if (gamepad_1 & DIR_DOWN) {
-        if (player1.pos_y < 198) {
-            player1.pos_y += 2;
-        }
-    }
+
 }
 
 /**
@@ -30,14 +46,27 @@ void gamepad1_input_handling(void){
  */
 void gamepad2_input_handling(void){
 
-    if (gamepad_2 & DIR_UP) {
-        if (player2.pos_y > 32) {
-            player2.pos_y -=2;
+    if(gamepad_2 & START){
+        if(!flag_start_pressed) {
+            player2.pause = !player2.pause;
+            flag_start_pressed = 1;
         }
+
     }
-    if (gamepad_2 & DIR_DOWN) {
-        if (player2.pos_y < 198) {
-            player2.pos_y += 2;
+    else{
+        flag_start_pressed = 0;
+    }
+
+    if(!player1.pause && !player2.pause) {       /* make sure that position cannot be changed during pause */
+        if (gamepad_2 & DIR_UP) {
+            if (player2.pos_y > 32) {
+                player2.pos_y -= 2;
+            }
+        }
+        if (gamepad_2 & DIR_DOWN) {
+            if (player2.pos_y < 198) {
+                player2.pos_y += 2;
+            }
         }
     }
 }

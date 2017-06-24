@@ -16,13 +16,11 @@ void score_detecion(void){
     if(ball.pos_x < (player1.pos_x+8)){
         flag_score = 1;
         ++player2.score;
-        score_loop = 0;
         return;
     }
     if(ball.pos_x > (player2.pos_x)){
         flag_score = 1;
         ++player1.score;
-        score_loop = 0;
         return;
     }
 }

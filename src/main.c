@@ -13,11 +13,11 @@
 
 void main(void){
     oam_offset = 0;
-    flag_score = 0;
     flag_wall_hit = 0;
 
     player1.score = 0;
     player2.score = 0;
+
 
     ball.dir = RIGHT;
     ball.angle = HORZ;
@@ -35,21 +35,26 @@ void main(void){
     while(1) {          //match-loop
         player1.pos_x = 2;
         player1.pos_y = 60;
+        player1.pause = 0;
         player2.pos_x = 246;
         player2.pos_y = 60;
+        player2.pause = 0;
         ball.pos_x = 120;
         ball.pos_y = 68;
         ball.angle = HORZ;
-        score_loop = 1;
+        flag_score = 0;
+        flag_start_pressed = 0;
 
-        while (score_loop) {
+        while (!flag_score) {
 
             mainloop_input();
 
-            mainloop_update();
+            if(!player1.pause && !player2.pause) {
+                mainloop_update();
+            }
+                wait_until_nmi();
+                mainloop_render();
 
-            wait_until_nmi();
-            mainloop_render();
         }
     }
 }
