@@ -16,7 +16,14 @@ void main(void){
     flag_wall_hit = 0;
 
     player1.score = 0;
+    player1.score_digit1 = 0;
+    player1.score_digit2 = 0;
+    player1.score_digit3 = 0;
+
     player2.score = 0;
+    player2.score_digit1 = 0;
+    player2.score_digit2 = 0;
+    player2.score_digit3 = 0;
 
 
     ball.dir = RIGHT;

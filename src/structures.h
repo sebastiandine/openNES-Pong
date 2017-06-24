@@ -34,6 +34,9 @@ typedef struct player_struct{
     unsigned char pos_y;
     unsigned char score;
     unsigned char pause;
+    unsigned char score_digit1;
+    unsigned char score_digit2;
+    unsigned char score_digit3;
 };
 
 /**

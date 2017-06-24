@@ -5,30 +5,30 @@
  */
 
 /**
- * @brief This function renders the score of player1 and player2 as background update to the screen.
+ * @brief This function renders the digits of scores of player1 and player2 as background update to the screen.
  */
 void render_score(void){
     /* player1 score */
     PPU_ADDRESS = MSB(0x204b);
     PPU_ADDRESS = LSB(0x204b);
-    PPU_DATA = 0x10+(player1.score >> 10);
+    PPU_DATA = 0x10 + player1.score_digit1;
     PPU_ADDRESS = MSB(0x204c);
     PPU_ADDRESS = LSB(0x204c);
-    PPU_DATA = 0x10+((player1.score / 10) % 10);
+    PPU_DATA = 0x10 + player1.score_digit2;
     PPU_ADDRESS = MSB(0x204d);
     PPU_ADDRESS = LSB(0x204d);
-    PPU_DATA = 0x10+(player1.score % 10);
+    PPU_DATA = 0x10 +  player1.score_digit3;
 
     /* player2 score */
     PPU_ADDRESS = MSB(0x205b);
     PPU_ADDRESS = LSB(0x205b);
-    PPU_DATA = 0x10+(player2.score >> 10);
+    PPU_DATA = 0x10 + player2.score_digit1;
     PPU_ADDRESS = MSB(0x205c);
     PPU_ADDRESS = LSB(0x205c);
-    PPU_DATA = 0x10+((player2.score / 10) % 10);
+    PPU_DATA = 0x10 + player2.score_digit2;
     PPU_ADDRESS = MSB(0x205d);
     PPU_ADDRESS = LSB(0x205d);
-    PPU_DATA = 0x10+(player2.score % 10);
+    PPU_DATA = 0x10 + player2.score_digit3;
 }
 
 /**

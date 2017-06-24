@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['pause',['pause',['../structplayer__struct.html#af005a22a9f7e1dbfe61f0c4380f5ce83',1,'player_struct']]],
   ['player1',['player1',['../globals_8h.html#aa9a6cff025c15a8ca4fa3c92e66e2690',1,'globals.h']]],
   ['player2',['player2',['../globals_8h.html#ad60138641fdfcf0d0dd8d7605e8e57f7',1,'globals.h']]],
   ['pos_5fx',['pos_x',['../structplayer__struct.html#a3fe2909ae81486df6f149f697c14fc9a',1,'player_struct::pos_x()'],['../structball__struct.html#a3fe2909ae81486df6f149f697c14fc9a',1,'ball_struct::pos_x()']]],

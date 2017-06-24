@@ -26,6 +26,20 @@ void score_detecion(void){
 }
 
 /**
+ * @brief This function updates the single digits which display the score of each player, once one player hits
+ * a score.
+ */
+void update_score_digits(void){
+    player1.score_digit1 = player1.score >> 10;
+    player1.score_digit2 = (player1.score / 10) % 10;
+    player1.score_digit3 = player1.score % 10;
+
+    player2.score_digit1 = player2.score >> 10;
+    player2.score_digit2 = (player2.score / 10) % 10;
+    player2.score_digit3 = player2.score % 10;
+}
+
+/**
  * @brief This function calculates the movement of the ball for the next frame.
  */
 void ball_movement(void){
@@ -220,6 +234,7 @@ void mainloop_update(void){
 
     score_detecion();
     if(flag_score){
+        update_score_digits();
         return;
     }
 }

@@ -1,5 +1,7 @@
 /**
- *
+ * @file globals.h
+ * @brief This file contains all game specific globals.
+ * @author Sebastian Dine
  */
 
 #pragma bss-name(push, "ZEROPAGE")

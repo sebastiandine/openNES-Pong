@@ -94,6 +94,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a361ce92fcf31446ba5a863d46730687d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#a361ce92fcf31446ba5a863d46730687d">score_detecion</a> (void)</td></tr>
 <tr class="memdesc:a361ce92fcf31446ba5a863d46730687d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks, if a player hit a score and in case of a score increases the score count of the corresponding player. Moreover in case of a score, if sets global <a class="el" href="globals_8h.html#a794c13f33d196a34b25604434098c73e">flag_score</a> to 1 and global <a class="el" href="">score_loop</a> to 0.  <a href="#a361ce92fcf31446ba5a863d46730687d">More...</a><br /></td></tr>
 <tr class="separator:a361ce92fcf31446ba5a863d46730687d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba8344030e8567891c25726114c616a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#aba8344030e8567891c25726114c616a9">update_score_digits</a> (void)</td></tr>
+<tr class="memdesc:aba8344030e8567891c25726114c616a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function updates the single digits which display the score of each player, once one player hits a score.  <a href="#aba8344030e8567891c25726114c616a9">More...</a><br /></td></tr>
+<tr class="separator:aba8344030e8567891c25726114c616a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba4374510db17b9eb700fa0e60d4f31d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="update_8c.html#aba4374510db17b9eb700fa0e60d4f31d">ball_movement</a> (void)</td></tr>
 <tr class="memdesc:aba4374510db17b9eb700fa0e60d4f31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the movement of the ball for the next frame.  <a href="#aba4374510db17b9eb700fa0e60d4f31d">More...</a><br /></td></tr>
 <tr class="separator:aba4374510db17b9eb700fa0e60d4f31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +169,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="update_8c.html#ae23c104ab806fc429fc594fa7e764a06" title="This function checks, if the ball hits the upper or lower wall and reverses its angle direction if so..." alt="" coords="180,56,305,83"/>
 <area shape="rect" id="node4" href="update_8c.html#a5d9ed04d989de718d624566f65adf16e" title="This function checks if the ball hit a players paddle. In case of a hit detection, it calculates the new movement angle of the ball and inverses its direction. See ball_angle for the definition of ball movement angles. " alt="" coords="173,107,312,133"/>
 <area shape="rect" id="node5" href="update_8c.html#a361ce92fcf31446ba5a863d46730687d" title="This function checks, if a player hit a score and in case of a score increases the score count of the..." alt="" coords="187,157,298,184"/>
+<area shape="rect" id="node6" href="update_8c.html#aba8344030e8567891c25726114c616a9" title="This function updates the single digits which display the score of each player, once one player hits ..." alt="" coords="173,208,312,235"/>
 </map>
 </div>
 <div class="dynheader">
@@ -232,6 +236,35 @@ Here is the caller graph for this function:</div>
 <map name="update_8c_a361ce92fcf31446ba5a863d46730687d_icgraph" id="update_8c_a361ce92fcf31446ba5a863d46730687d_icgraph">
 <area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="This function orchestrates all update functions and encapsulates them to the main loop..." alt="" coords="164,5,284,32"/>
 <area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="332,5,383,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aba8344030e8567891c25726114c616a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba8344030e8567891c25726114c616a9">&#9670;&nbsp;</a></span>update_score_digits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void update_score_digits </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function updates the single digits which display the score of each player, once one player hits a score. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="update_8c_aba8344030e8567891c25726114c616a9_icgraph.png" border="0" usemap="#update_8c_aba8344030e8567891c25726114c616a9_icgraph" alt=""/></div>
+<map name="update_8c_aba8344030e8567891c25726114c616a9_icgraph" id="update_8c_aba8344030e8567891c25726114c616a9_icgraph">
+<area shape="rect" id="node2" href="update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="This function orchestrates all update functions and encapsulates them to the main loop..." alt="" coords="192,5,312,32"/>
+<area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="360,5,411,32"/>
 </map>
 </div>
 
