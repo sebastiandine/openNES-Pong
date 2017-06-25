@@ -18,12 +18,10 @@ void main(void){
     player1.score = 0;
     player1.score_digit1 = 0;
     player1.score_digit2 = 0;
-    player1.score_digit3 = 0;
 
     player2.score = 0;
     player2.score_digit1 = 0;
     player2.score_digit2 = 0;
-    player2.score_digit3 = 0;
 
 
     ball.dir = RIGHT;
@@ -39,7 +37,8 @@ void main(void){
     wait_Vblank();
     ppu_turn_all_on();
 
-    while(1) {          //match-loop
+    /* Match loop */
+    while(1) {
         player1.pos_x = 2;
         player1.pos_y = 60;
         player1.pause = 0;
@@ -51,6 +50,7 @@ void main(void){
         ball.angle = HORZ;
         flag_score = 0;
 
+        /* Score loop within a match */
         while (!flag_score) {
 
             mainloop_input();

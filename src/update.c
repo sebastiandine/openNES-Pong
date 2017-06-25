@@ -30,13 +30,11 @@ void score_detecion(void){
  * a score.
  */
 void update_score_digits(void){
-    player1.score_digit1 = player1.score >> 10;
-    player1.score_digit2 = (player1.score / 10) % 10;
-    player1.score_digit3 = player1.score % 10;
+    player1.score_digit1 = (player1.score / 10) % 10;
+    player1.score_digit2 = player1.score % 10;
 
-    player2.score_digit1 = player2.score >> 10;
-    player2.score_digit2 = (player2.score / 10) % 10;
-    player2.score_digit3 = player2.score % 10;
+    player2.score_digit1 = (player2.score / 10) % 10;
+    player2.score_digit2 = player2.score % 10;
 }
 
 /**
