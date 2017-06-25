@@ -13,14 +13,14 @@ void gamepad1_input_handling(void){
 
 
     if(gamepad_1 & START){
-        if(!flag_start_pressed) {
-           player1.pause = !player1.pause;
-            flag_start_pressed = 1;
+        if(!(gamepad_1_old & START)) {            /* make sure, that pause mode does not switch off an on again, when
+ *                                                   player holds START longer than one frame */
+           if(!player2.pause) {                   /* make sure, that player1 cannot start his pause mode, when player2
+                                                    has already started his pause mode */
+               player1.pause = !player1.pause;
+           }
         }
 
-    }
-    else{
-        flag_start_pressed = 0;
     }
 
 
@@ -47,14 +47,13 @@ void gamepad1_input_handling(void){
 void gamepad2_input_handling(void){
 
     if(gamepad_2 & START){
-        if(!flag_start_pressed) {
-            player2.pause = !player2.pause;
-            flag_start_pressed = 1;
+        if(!(gamepad_2_old & START)) {          /* make sure, that pause mode does not switch off an on again, when
+                                                   player holds START longer than one frame */
+            if(!player1.pause) {                /* make sure, that player2 cannot start his pause mode, when player1
+                                                   has already started his pause mode */
+                player2.pause = !player2.pause;
+            }
         }
-
-    }
-    else{
-        flag_start_pressed = 0;
     }
 
     if(!player1.pause && !player2.pause) {       /* make sure that position cannot be changed during pause */

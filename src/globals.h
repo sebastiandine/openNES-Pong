@@ -5,11 +5,6 @@
  */
 
 #pragma bss-name(push, "ZEROPAGE")
-/**
- * @brief Flag wich indicates, if button START was pressed on eighter controller during the last frame.
- * 0 indicates, that the button has not been pressed, 1 indicates, that the button has been pressed.
- */
-unsigned char flag_start_pressed;
 
 /**
  * @brief Flag which indicates, that a score happened.

@@ -50,7 +50,6 @@ void main(void){
         ball.pos_y = 68;
         ball.angle = HORZ;
         flag_score = 0;
-        flag_start_pressed = 0;
 
         while (!flag_score) {
 
