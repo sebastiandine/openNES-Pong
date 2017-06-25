@@ -4,6 +4,8 @@
  * @author Sebastian Dine
  */
 
+#include "game_over_screen.h"
+
 /**
  * @brief This function renders the digits of scores of player1 and player2 as background update to the screen.
  */
@@ -24,6 +26,35 @@ void render_score(void){
     PPU_ADDRESS = MSB(0x205d);
     PPU_ADDRESS = LSB(0x205d);
     PPU_DATA = 0x10 + player2.score_digit2;
+}
+
+/**
+ * @brief This functions renders the game over screen for aprox. 4 seconds.
+ */
+void render_game_over_screen(void){
+
+    ppu_clear_oam();
+    ppu_turn_all_off();
+
+    ppu_draw_background(game_over_screen, 'a');
+    wait_Vblank();
+    ppu_turn_all_on();
+
+
+    if(player1.win){
+        PPU_ADDRESS = MSB(0x2170);
+        PPU_ADDRESS = LSB(0x2170);
+        PPU_DATA = 0x21; //A
+    }
+
+    if(player2.win){
+        PPU_ADDRESS = MSB(0x2170);
+        PPU_ADDRESS = LSB(0x2170);
+        PPU_DATA = 0x22; //B
+    }
+
+    frm_count = 0;
+    while (frm_count < 240); /* wait for 4 seconds */
 }
 
 /**
@@ -61,11 +92,21 @@ void render_ball(void){
 void mainloop_render(void){
 
     /* render background */
+    if(!flag_match){            /* game over check */
+        render_game_over_screen();
+        return;
+    }
+
     if(flag_score){
         render_score();
     }
 
     /* render sprites */
+    if(player1.pause || player2.pause){
+        ppu_clear_oam();
+        return;
+    }
+
     oam_offset = 0;         /* make sure to set oam_offset to 0 before you render sprites */
     render_players();
     render_ball();

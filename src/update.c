@@ -214,6 +214,22 @@ void wall_hit_detection(void){
 }
 
 /**
+ * @brief This functions checks, if eighter on of the players has won the game.
+ */
+void game_over_check(void){
+    if( (player1.score >= 21) && (player2.score <= (player1.score - 2))){
+        player1.win = 1;
+        flag_match = 0;
+        return;
+    }
+    if( (player2.score >= 21) && (player1.score <= (player2.score - 2))){
+        player2.win = 1;
+        flag_match = 0;
+        return;
+    }
+}
+
+/**
  * @brief This function orchestrates all update functions and encapsulates them to the main loop.
  */
 void mainloop_update(void){
@@ -233,6 +249,7 @@ void mainloop_update(void){
     score_detecion();
     if(flag_score){
         update_score_digits();
+        game_over_check();
         return;
     }
 }

@@ -88,7 +88,7 @@ unsigned char ppu_load_sprite_to_oam(unsigned char x, unsigned char y, unsigned 
 }
 
 void ppu_clear_oam(void){
-	for(index = 0; index < sizeof(ppu_oam); ++index){
+	for(index = 0; index < oam_offset; ++index){
 		ppu_oam[index] = 0x00;
 	}
 }

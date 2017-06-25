@@ -7,6 +7,12 @@
 #pragma bss-name(push, "ZEROPAGE")
 
 /**
+ * @brief Flag which indicates, that the game is in a match loop.
+ * 0 indicates, that the game is not in a match loop, 1 indicates, that the game is in a match loop.
+ */
+unsigned char flag_match;
+
+/**
  * @brief Flag which indicates, that a score happened.
  * 0 indicates, that no score happened during the last frame, 1 indicates, that a score happened.
  */
