@@ -1,3 +1,5 @@
 <map id="wait_Vblank" name="wait_Vblank">
-<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="145,5,196,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="532,5,583,32"/>
+<area shape="rect" id="node3" href="$render_8c.html#af2319cfa84afd42327c777ff64385244" title="This functions renders the game over screen for aprox. 4 seconds. " alt="" coords="145,31,319,57"/>
+<area shape="rect" id="node4" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="367,31,484,57"/>
 </map>

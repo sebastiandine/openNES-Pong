@@ -93,9 +93,12 @@ $(document).ready(function(){initNavTree('globals_8h.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad505619067cdbeacbeba60122cd2fa44"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ad505619067cdbeacbeba60122cd2fa44">flag_start_pressed</a></td></tr>
-<tr class="memdesc:ad505619067cdbeacbeba60122cd2fa44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag wich indicates, if button START was pressed on eighter controller during the last frame. 0 indicates, that the button has not been pressed, 1 indicates, that the button has been pressed.  <a href="#ad505619067cdbeacbeba60122cd2fa44">More...</a><br /></td></tr>
-<tr class="separator:ad505619067cdbeacbeba60122cd2fa44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa549d7457f69e7824c10ad1ac8635383"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aa549d7457f69e7824c10ad1ac8635383">flag_game_selection</a></td></tr>
+<tr class="memdesc:aa549d7457f69e7824c10ad1ac8635383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag which indicates, which game mode the user selected in the menu. 0 indicates a game vs. the CPU, 1 indicates a game vs. player 2.  <a href="#aa549d7457f69e7824c10ad1ac8635383">More...</a><br /></td></tr>
+<tr class="separator:aa549d7457f69e7824c10ad1ac8635383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12c4b65e99da1eb45bbfd64b4d25f30"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aa12c4b65e99da1eb45bbfd64b4d25f30">flag_match</a></td></tr>
+<tr class="memdesc:aa12c4b65e99da1eb45bbfd64b4d25f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag which indicates, that the game is in a match loop. 0 indicates, that the game is not in a match loop, 1 indicates, that the game is in a match loop.  <a href="#aa12c4b65e99da1eb45bbfd64b4d25f30">More...</a><br /></td></tr>
+<tr class="separator:aa12c4b65e99da1eb45bbfd64b4d25f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a794c13f33d196a34b25604434098c73e"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a794c13f33d196a34b25604434098c73e">flag_score</a></td></tr>
 <tr class="memdesc:a794c13f33d196a34b25604434098c73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag which indicates, that a score happened. 0 indicates, that no score happened during the last frame, 1 indicates, that a score happened.  <a href="#a794c13f33d196a34b25604434098c73e">More...</a><br /></td></tr>
 <tr class="separator:a794c13f33d196a34b25604434098c73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +165,38 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa549d7457f69e7824c10ad1ac8635383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa549d7457f69e7824c10ad1ac8635383">&#9670;&nbsp;</a></span>flag_game_selection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned flag_game_selection</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag which indicates, which game mode the user selected in the menu. 0 indicates a game vs. the CPU, 1 indicates a game vs. player 2. </p>
+
+</div>
+</div>
+<a id="aa12c4b65e99da1eb45bbfd64b4d25f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12c4b65e99da1eb45bbfd64b4d25f30">&#9670;&nbsp;</a></span>flag_match</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char flag_match</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag which indicates, that the game is in a match loop. 0 indicates, that the game is not in a match loop, 1 indicates, that the game is in a match loop. </p>
+
+</div>
+</div>
 <a id="a794c13f33d196a34b25604434098c73e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a794c13f33d196a34b25604434098c73e">&#9670;&nbsp;</a></span>flag_score</h2>
 
@@ -175,22 +210,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag which indicates, that a score happened. 0 indicates, that no score happened during the last frame, 1 indicates, that a score happened. </p>
-
-</div>
-</div>
-<a id="ad505619067cdbeacbeba60122cd2fa44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad505619067cdbeacbeba60122cd2fa44">&#9670;&nbsp;</a></span>flag_start_pressed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char flag_start_pressed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Flag wich indicates, if button START was pressed on eighter controller during the last frame. 0 indicates, that the button has not been pressed, 1 indicates, that the button has been pressed. </p>
 
 </div>
 </div>

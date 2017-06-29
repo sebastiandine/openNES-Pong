@@ -77,7 +77,10 @@ void mainloop_input(void){
     get_controller_input();
 
     gamepad1_input_handling();
-    gamepad2_input_handling();
+
+    if(flag_game_selection) {           /* gamepad 2 is only active if player select player1 vs. player2 mode. */
+        gamepad2_input_handling();
+    }
 
 
 }

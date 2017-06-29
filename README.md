@@ -1,5 +1,6 @@
 # openNES Pong
 ## Rebuilding classic games for the NES as Open Source  
+![IMG1](pong1.png) ![IMG2](pong2.png) ![IMG3](pong3.png)
 
 ## Project Description
 This is the second entry of the openNES project series which aims to rebuild classic video games for the Nintendo 

@@ -4,4 +4,5 @@
 <area shape="rect" id="node4" href="$update_8c.html#a5d9ed04d989de718d624566f65adf16e" title="This function checks if the ball hit a players paddle. In case of a hit detection, it calculates the new movement angle of the ball and inverses its direction. See ball_angle for the definition of ball movement angles. " alt="" coords="173,107,312,133"/>
 <area shape="rect" id="node5" href="$update_8c.html#a361ce92fcf31446ba5a863d46730687d" title="This function checks, if a player hit a score and in case of a score increases the score count of the..." alt="" coords="187,157,298,184"/>
 <area shape="rect" id="node6" href="$update_8c.html#aba8344030e8567891c25726114c616a9" title="This function updates the single digits which display the score of each player, once one player hits ..." alt="" coords="173,208,312,235"/>
+<area shape="rect" id="node7" href="$update_8c.html#ac54f13441c1d7520b0d59a5cf0677f27" title="This functions checks, if eighter on of the players has won the game. " alt="" coords="179,259,306,285"/>
 </map>

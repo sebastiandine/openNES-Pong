@@ -7,6 +7,12 @@
 #pragma bss-name(push, "ZEROPAGE")
 
 /**
+ * @brief Flag which indicates, which game mode the user selected in the menu.
+ * 0 indicates a game vs. the CPU, 1 indicates a game vs. player 2.
+ */
+unsigned flag_game_selection;
+
+/**
  * @brief Flag which indicates, that the game is in a match loop.
  * 0 indicates, that the game is not in a match loop, 1 indicates, that the game is in a match loop.
  */

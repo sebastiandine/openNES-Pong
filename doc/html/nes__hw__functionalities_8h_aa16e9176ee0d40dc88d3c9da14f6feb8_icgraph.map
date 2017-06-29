@@ -1,3 +1,5 @@
 <map id="ppu_draw_background" name="ppu_draw_background">
-<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="204,5,255,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="591,5,641,32"/>
+<area shape="rect" id="node3" href="$render_8c.html#af2319cfa84afd42327c777ff64385244" title="This functions renders the game over screen for aprox. 4 seconds. " alt="" coords="204,31,377,57"/>
+<area shape="rect" id="node4" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="425,31,543,57"/>
 </map>
