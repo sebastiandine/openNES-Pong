@@ -230,10 +230,52 @@ void game_over_check(void){
 }
 
 /**
+ * This function calculates the automatical movement of player2, if 'player1 vs. cpu' game mode was selected.
+ */
+void cpu_player2_movement(void){
+
+    /* when ball is moving towards player2, the movement gets calculated
+       according to the angle direction of the ball */
+    if(ball.dir == RIGHT){
+        if((ball.angle_dir == UP) && (player2.pos_y > 32)){
+            if(ball.pos_y < player2.pos_y){
+                player2.pos_y -= 1;
+            }
+        }
+        if((ball.angle_dir == DOWN) && (player2.pos_y < 198)){
+            if(ball.pos_y > player2.pos_y){
+                player2.pos_y += 1;
+            }
+
+        }
+
+        if(ball.angle == HORZ) {
+            if ((ball.pos_y < player2.pos_y) && (player2.pos_y > 32)) {
+                player2.pos_y -= 1;
+            } else {
+                if ((ball.pos_y > player2.pos_y) && (player2.pos_y < 198)) {
+                    player2.pos_y += 1;
+                }
+            }
+        }
+    }
+
+    /* When the ball movement away from player2, he returns to the starting position
+     */
+    if(ball.dir == LEFT){
+        if(start_pos_y > player2.pos_y){
+            player2.pos_y += 1;
+        }
+        if(start_pos_y < player2.pos_y){
+            player2.pos_y -= 1;
+        }
+    }
+}
+
+/**
  * @brief This function orchestrates all update functions and encapsulates them to the main loop.
  */
 void mainloop_update(void){
-
 
 
     ball_movement();
@@ -244,6 +286,11 @@ void mainloop_update(void){
     }
     else{
         player_hit_detection();
+    }
+
+    /* cpu controlled player2 in case of 'player1 vs. cpu game' mode */
+    if(!flag_game_selection){
+        cpu_player2_movement();
     }
 
     score_detecion();

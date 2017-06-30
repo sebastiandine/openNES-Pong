@@ -74,6 +74,8 @@ void main(void){
         ball.angle = HORZ;
         ball.angle_dir = UP;
 
+        start_pos_y = 90;
+
         ppu_turn_all_off();
         set_bg_palette(bg_palette);
         set_sprite_palette(sprite_palette);
@@ -87,13 +89,13 @@ void main(void){
         /* Match loop */
         while (flag_match) {
             player1.pos_x = 2;
-            player1.pos_y = 60;
+            player1.pos_y = start_pos_y;
             player1.pause = 0;
             player2.pos_x = 246;
-            player2.pos_y = 60;
+            player2.pos_y = start_pos_y;
             player2.pause = 0;
             ball.pos_x = 120;
-            ball.pos_y = 68;
+            ball.pos_y = start_pos_y + 8;
             ball.angle = HORZ;
             flag_score = 0;
 

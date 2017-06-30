@@ -31,6 +31,11 @@ unsigned char flag_score;
 unsigned char flag_wall_hit;
 
 /**
+ * @brief Starting y-position of player1, player2.
+ */
+unsigned char start_pos_y;
+
+/**
  *  @brief Player1
  */
 static struct player_struct player1;

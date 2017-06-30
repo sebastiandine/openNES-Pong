@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['score_5fdetecion',['score_detecion',['../update_8c.html#a361ce92fcf31446ba5a863d46730687d',1,'update.c']]],
-  ['set_5fbg_5fpalette',['set_bg_palette',['../nes__hw__functionalities_8c.html#a31a768f7aeb9886d71fd92381db17f94',1,'set_bg_palette(const unsigned char *new_bg_palette):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#aa48cb068dfda9992f8ce9487815a36dd',1,'set_bg_palette(const unsigned char *bg_palette):&#160;nes_hw_functionalities.c']]],
-  ['set_5fsprite_5fpalette',['set_sprite_palette',['../nes__hw__functionalities_8c.html#a9073731ddd16622334e5a3a53ef8ff96',1,'set_sprite_palette(const unsigned char *new_sprite_palette):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#ad2526e9fbf2f02942a0cc7270aad0057',1,'set_sprite_palette(const unsigned char *sprite_palette):&#160;nes_hw_functionalities.c']]]
+  ['render_5fball',['render_ball',['../render_8c.html#a5240636f9b79ed7294e04a004f4c881e',1,'render.c']]],
+  ['render_5fgame_5fover_5fscreen',['render_game_over_screen',['../render_8c.html#af2319cfa84afd42327c777ff64385244',1,'render.c']]],
+  ['render_5fplayers',['render_players',['../render_8c.html#afa1b85bcd414f986dc63cfc32f6ff2a9',1,'render.c']]],
+  ['render_5fscore',['render_score',['../render_8c.html#a2c9fe4d086301a3821d7fb93a7158341',1,'render.c']]]
 ];

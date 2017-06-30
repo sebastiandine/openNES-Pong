@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['score',['score',['../structplayer__struct.html#a0915598f13ff54914dd30a1480c846aa',1,'player_struct']]],
-  ['score_5fdetecion',['score_detecion',['../update_8c.html#a361ce92fcf31446ba5a863d46730687d',1,'update.c']]],
-  ['score_5fdigit1',['score_digit1',['../structplayer__struct.html#acce5462db8b26a09606056497a216a98',1,'player_struct']]],
-  ['score_5fdigit2',['score_digit2',['../structplayer__struct.html#a29fcace881cb3c90d7a5db5a8cde9d0f',1,'player_struct']]],
-  ['select',['SELECT',['../nes__hw__functionalities_8h.html#a53dc4af00adc7b3b4d12eafb71596dfc',1,'nes_hw_functionalities.h']]],
-  ['set_5fbg_5fpalette',['set_bg_palette',['../nes__hw__functionalities_8c.html#a31a768f7aeb9886d71fd92381db17f94',1,'set_bg_palette(const unsigned char *new_bg_palette):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#aa48cb068dfda9992f8ce9487815a36dd',1,'set_bg_palette(const unsigned char *bg_palette):&#160;nes_hw_functionalities.c']]],
-  ['set_5fsprite_5fpalette',['set_sprite_palette',['../nes__hw__functionalities_8c.html#a9073731ddd16622334e5a3a53ef8ff96',1,'set_sprite_palette(const unsigned char *new_sprite_palette):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#ad2526e9fbf2f02942a0cc7270aad0057',1,'set_sprite_palette(const unsigned char *sprite_palette):&#160;nes_hw_functionalities.c']]],
-  ['sprite_5fattr',['SPRITE_ATTR',['../nes__hw__functionalities_8h.html#ab9b8471c6f5e12332c17c27d06467647',1,'nes_hw_functionalities.h']]],
-  ['sprite_5fpalette',['sprite_palette',['../globals_8h.html#af23796a848cd6907595256509d429963',1,'globals.h']]],
-  ['start',['START',['../nes__hw__functionalities_8h.html#a3018c7600b7bb9866400596a56a57af7',1,'nes_hw_functionalities.h']]],
-  ['structures_2eh',['structures.h',['../structures_8h.html',1,'']]]
+  ['render_2ec',['render.c',['../render_8c.html',1,'']]],
+  ['render_5fball',['render_ball',['../render_8c.html#a5240636f9b79ed7294e04a004f4c881e',1,'render.c']]],
+  ['render_5fgame_5fover_5fscreen',['render_game_over_screen',['../render_8c.html#af2319cfa84afd42327c777ff64385244',1,'render.c']]],
+  ['render_5fplayers',['render_players',['../render_8c.html#afa1b85bcd414f986dc63cfc32f6ff2a9',1,'render.c']]],
+  ['render_5fscore',['render_score',['../render_8c.html#a2c9fe4d086301a3821d7fb93a7158341',1,'render.c']]],
+  ['right',['RIGHT',['../structures_8h.html#ae465566298bc6a2c71a6eed4afb8171faec8379af7490bb9eaaf579cf17876f38',1,'structures.h']]]
 ];
