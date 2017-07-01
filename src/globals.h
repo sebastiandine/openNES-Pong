@@ -36,6 +36,12 @@ unsigned char flag_wall_hit;
 unsigned char start_pos_y;
 
 /**
+ * @brief Variable which counts how many times the ball hits the paddle of player1 or player2 during one set.
+ * This variable is used to calculate the speed of the ball. The speed increases in 5 hit steps.
+ */
+unsigned char paddle_hit_count;
+
+/**
  *  @brief Player1
  */
 static struct player_struct player1;

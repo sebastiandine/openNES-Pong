@@ -94,10 +94,14 @@ void main(void){
             player2.pos_x = 246;
             player2.pos_y = start_pos_y;
             player2.pause = 0;
+
             ball.pos_x = 120;
             ball.pos_y = start_pos_y + 8;
             ball.angle = HORZ;
+            ball.speed = 2;
+
             flag_score = 0;
+            paddle_hit_count = 0;
 
 
             /* Score loop within a match */

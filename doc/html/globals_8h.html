@@ -108,6 +108,9 @@ Variables</h2></td></tr>
 <tr class="memitem:ade12a2e657cd5e0c7ff3160d96ff0079"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#ade12a2e657cd5e0c7ff3160d96ff0079">start_pos_y</a></td></tr>
 <tr class="memdesc:ade12a2e657cd5e0c7ff3160d96ff0079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting y-position of player1, player2.  <a href="#ade12a2e657cd5e0c7ff3160d96ff0079">More...</a><br /></td></tr>
 <tr class="separator:ade12a2e657cd5e0c7ff3160d96ff0079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7176a7a94979e6490bb08f6f11288fb3"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#a7176a7a94979e6490bb08f6f11288fb3">paddle_hit_count</a></td></tr>
+<tr class="memdesc:a7176a7a94979e6490bb08f6f11288fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable which counts how many times the ball hits the paddle of player1 or player2 during one set. This variable is used to calculate the speed of the ball. The speed increases in 5 hit steps.  <a href="#a7176a7a94979e6490bb08f6f11288fb3">More...</a><br /></td></tr>
+<tr class="separator:a7176a7a94979e6490bb08f6f11288fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9a6cff025c15a8ca4fa3c92e66e2690"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structplayer__struct.html">player_struct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8h.html#aa9a6cff025c15a8ca4fa3c92e66e2690">player1</a></td></tr>
 <tr class="memdesc:aa9a6cff025c15a8ca4fa3c92e66e2690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Player1.  <a href="#aa9a6cff025c15a8ca4fa3c92e66e2690">More...</a><br /></td></tr>
 <tr class="separator:aa9a6cff025c15a8ca4fa3c92e66e2690"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +232,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Flag which indicates, that the ball hit the upper or lower fall. 0 indicates, that the ball did not hit a wall during the last frame, 1 indicates, that the ball hit the wall. </p>
+
+</div>
+</div>
+<a id="a7176a7a94979e6490bb08f6f11288fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7176a7a94979e6490bb08f6f11288fb3">&#9670;&nbsp;</a></span>paddle_hit_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char paddle_hit_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable which counts how many times the ball hits the paddle of player1 or player2 during one set. This variable is used to calculate the speed of the ball. The speed increases in 5 hit steps. </p>
 
 </div>
 </div>

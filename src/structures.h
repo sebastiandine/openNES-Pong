@@ -45,6 +45,7 @@ typedef struct player_struct{
 typedef struct ball_struct{
     unsigned char pos_x;
     unsigned char pos_y;
+    unsigned char speed;  /* pixels per frame, which the ball moves */
     enum ball_dir dir;
     enum ball_angle angle;
     enum ball_angle_dir angle_dir;

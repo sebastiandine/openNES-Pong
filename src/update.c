@@ -11,14 +11,16 @@
  * Moreover in case of a score, if sets global @link flag_score @endlink to 1 and
  * global @link score_loop @endlink to 0.
  */
-void score_detecion(void){
+void score_detection(void){
 
-    if(ball.pos_x < (player1.pos_x+8)){
+    if((ball.pos_x + ball.speed) < (player1.pos_x+8)){    /* + ball.speed to make sure, that increased ball.speed, does
+                                                               not mess up hit detection */
         flag_score = 1;
         ++player2.score;
         return;
     }
-    if(ball.pos_x > (player2.pos_x)){
+    if((ball.pos_x - ball.speed) > (player2.pos_x)){      /* - ball.speed to make sure, that increased ball.speed, does
+                                                               not mess up hit detection */
         flag_score = 1;
         ++player1.score;
         return;
@@ -43,7 +45,7 @@ void update_score_digits(void){
 void ball_movement(void){
 
     if (ball.dir == RIGHT) {
-        ball.pos_x += 2;
+        ball.pos_x += ball.speed;
 
         if (ball.angle_dir == UP) {
             ball.pos_y -= ball.angle;
@@ -55,7 +57,7 @@ void ball_movement(void){
     }
 
     if (ball.dir == LEFT) {
-        ball.pos_x -= 2;
+        ball.pos_x -= ball.speed;
 
         if (ball.angle_dir == UP) {
             ball.pos_y -= ball.angle;
@@ -81,6 +83,8 @@ void player_hit_detection(void){
         /* Hit detection for player2 */
         if (ball.pos_x >= (player2.pos_x - 8)) {               /* (player2.pos_x - 8) because player2.pos_x is the
                                                                    right end of player2.*/
+
+            ++paddle_hit_count; /* increase paddle hit count in order to calculate the balls speed */
 
             /*
              * In order to make hit detection with paddles easier. We assume, that each paddle is 7 pixels larger
@@ -144,11 +148,15 @@ void player_hit_detection(void){
             }
         }
     }
+
     if (ball.dir == LEFT) {
 
         /* Hit detection for player1 (see explanation of paddle sections above)*/
         if (ball.pos_x <= (player1.pos_x + 8)) {                      /* (player1.pos_x + 8) because player1.pos_x is the
                                                                           left end of player1.*/
+
+            ++paddle_hit_count; /* increase paddle hit count in order to calculate the balls speed */
+
 
             if((ball.pos_y >= (player1.pos_y + 5)) && (ball.pos_y <= (player1.pos_y + 11))){        /* horizontal angle */
                 ball.dir = RIGHT;
@@ -239,22 +247,22 @@ void cpu_player2_movement(void){
     if(ball.dir == RIGHT){
         if((ball.angle_dir == UP) && (player2.pos_y > 32)){
             if(ball.pos_y < player2.pos_y){
-                player2.pos_y -= 1;
+                player2.pos_y -= 2;
             }
         }
         if((ball.angle_dir == DOWN) && (player2.pos_y < 198)){
             if(ball.pos_y > player2.pos_y){
-                player2.pos_y += 1;
+                player2.pos_y += 2;
             }
 
         }
 
         if(ball.angle == HORZ) {
             if ((ball.pos_y < player2.pos_y) && (player2.pos_y > 32)) {
-                player2.pos_y -= 1;
+                player2.pos_y -= 2;
             } else {
                 if ((ball.pos_y > player2.pos_y) && (player2.pos_y < 198)) {
-                    player2.pos_y += 1;
+                    player2.pos_y += 2;
                 }
             }
         }
@@ -277,9 +285,18 @@ void cpu_player2_movement(void){
  */
 void mainloop_update(void){
 
-
+    /* calculation of ball movement and speed */
     ball_movement();
 
+    switch(paddle_hit_count){
+        case 5 : ball.speed = 3; break;
+        case 10 : ball.speed = 4; break;
+        case 15 : ball.speed = 5; break;
+        case 20 : ball.speed = 6; break;
+        default: break;
+    }
+
+    /* hit detection */
     wall_hit_detection();
     if(flag_wall_hit){
         flag_wall_hit = 0;
@@ -288,12 +305,13 @@ void mainloop_update(void){
         player_hit_detection();
     }
 
-    /* cpu controlled player2 in case of 'player1 vs. cpu game' mode */
+    /* calculation of cpu controlled player2 in case of 'player1 vs. cpu game' mode */
     if(!flag_game_selection){
         cpu_player2_movement();
     }
 
-    score_detecion();
+    /* score detection */
+    score_detection();
     if(flag_score){
         update_score_digits();
         game_over_check();
