@@ -204,6 +204,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a3d38c0d50bdfde3f95c5a66e9ed68af7"><td class="memItemLeft" align="right" valign="top">void __fastcall__&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a3d38c0d50bdfde3f95c5a66e9ed68af7">memcpy</a> (void *dest, const void *src, int count)</td></tr>
 <tr class="memdesc:a3d38c0d50bdfde3f95c5a66e9ed68af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function copies data bulkwise . This is much faster than using a loop for copying data.  <a href="#a3d38c0d50bdfde3f95c5a66e9ed68af7">More...</a><br /></td></tr>
 <tr class="separator:a3d38c0d50bdfde3f95c5a66e9ed68af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6488ae01aa85f1891d0d06fa6164fd2"><td class="memItemLeft" align="right" valign="top">void __fastcall__&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2">reset_music</a> (void)</td></tr>
+<tr class="memdesc:ab6488ae01aa85f1891d0d06fa6164fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function resets the APU and initializes the FamiTone music engine.  <a href="#ab6488ae01aa85f1891d0d06fa6164fd2">More...</a><br /></td></tr>
+<tr class="separator:ab6488ae01aa85f1891d0d06fa6164fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dbcf79df7fa03ec1fb990745a030ccd"><td class="memItemLeft" align="right" valign="top">void __fastcall__&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd">play_music</a> (unsigned char song)</td></tr>
+<tr class="memdesc:a3dbcf79df7fa03ec1fb990745a030ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function starts playing the song with the given number in the famitone music file, specifed in file 'config/reset.s' with label music_data.  <a href="#a3dbcf79df7fa03ec1fb990745a030ccd">More...</a><br /></td></tr>
+<tr class="separator:a3dbcf79df7fa03ec1fb990745a030ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b34c2fe7b42b098cd341ba451b8099"><td class="memItemLeft" align="right" valign="top">void __fastcall__&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nes__hw__functionalities_8h.html#ad8b34c2fe7b42b098cd341ba451b8099">update_music</a> (void)</td></tr>
+<tr class="separator:ad8b34c2fe7b42b098cd341ba451b8099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -763,6 +771,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a3dbcf79df7fa03ec1fb990745a030ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dbcf79df7fa03ec1fb990745a030ccd">&#9670;&nbsp;</a></span>play_music()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __fastcall__ play_music </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>song</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function starts playing the song with the given number in the famitone music file, specifed in file 'config/reset.s' with label music_data. </p>
+<p>Everytime you would like to play a new song, first you have the reset the engine, using function <a class="el" href="nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2">reset_music()</a>, then you have to select the music you would like to play, using function <a class="el" href="nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd">play_music()</a>. Afterwards you have to update the music processing every frame, using function <a class="el" href="nes__hw__functionalities_8h.html#ad8b34c2fe7b42b098cd341ba451b8099">update_music()</a> . </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="nes__hw__functionalities_8h_a3dbcf79df7fa03ec1fb990745a030ccd_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_a3dbcf79df7fa03ec1fb990745a030ccd_icgraph" alt=""/></div>
+<map name="nes__hw__functionalities_8h_a3dbcf79df7fa03ec1fb990745a030ccd_icgraph" id="nes__hw__functionalities_8h_a3dbcf79df7fa03ec1fb990745a030ccd_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="141,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a34c94ebddea4cccf8f46406be1408d84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34c94ebddea4cccf8f46406be1408d84">&#9670;&nbsp;</a></span>ppu_clear_oam()</h2>
 
@@ -1054,6 +1091,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ab6488ae01aa85f1891d0d06fa6164fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6488ae01aa85f1891d0d06fa6164fd2">&#9670;&nbsp;</a></span>reset_music()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __fastcall__ reset_music </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function resets the APU and initializes the FamiTone music engine. </p>
+<p>Everytime you would like to play a new song, first you have the reset the engine, using function <a class="el" href="nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2">reset_music()</a>, then you have to select the music you would like to play, using function <a class="el" href="nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd">play_music()</a>. Afterwards you have to update the music processing every frame, using function <a class="el" href="nes__hw__functionalities_8h.html#ad8b34c2fe7b42b098cd341ba451b8099">update_music()</a> . </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="nes__hw__functionalities_8h_ab6488ae01aa85f1891d0d06fa6164fd2_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_ab6488ae01aa85f1891d0d06fa6164fd2_icgraph" alt=""/></div>
+<map name="nes__hw__functionalities_8h_ab6488ae01aa85f1891d0d06fa6164fd2_icgraph" id="nes__hw__functionalities_8h_ab6488ae01aa85f1891d0d06fa6164fd2_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="147,5,197,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aa48cb068dfda9992f8ce9487815a36dd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa48cb068dfda9992f8ce9487815a36dd">&#9670;&nbsp;</a></span>set_bg_palette()</h2>
 
@@ -1154,6 +1220,34 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="735,5,785,32"/>
 <area shape="rect" id="node4" href="render_8c.html#af2319cfa84afd42327c777ff64385244" title="This functions renders the game over screen for aprox. 4 seconds. " alt="" coords="348,31,521,57"/>
 <area shape="rect" id="node5" href="render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="569,31,687,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad8b34c2fe7b42b098cd341ba451b8099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b34c2fe7b42b098cd341ba451b8099">&#9670;&nbsp;</a></span>update_music()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __fastcall__ update_music </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function updates music processing. Call this function once every frame.</p>
+<p>Everytime you would like to play a new song, first you have the reset the engine, using function <a class="el" href="nes__hw__functionalities_8h.html#ab6488ae01aa85f1891d0d06fa6164fd2">reset_music()</a>, then you have to select the music you would like to play, using function <a class="el" href="nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd">play_music()</a>. Afterwards you have to update the music processing every frame, using function <a class="el" href="nes__hw__functionalities_8h.html#ad8b34c2fe7b42b098cd341ba451b8099">update_music()</a> . </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="nes__hw__functionalities_8h_ad8b34c2fe7b42b098cd341ba451b8099_icgraph.png" border="0" usemap="#nes__hw__functionalities_8h_ad8b34c2fe7b42b098cd341ba451b8099_icgraph" alt=""/></div>
+<map name="nes__hw__functionalities_8h_ad8b34c2fe7b42b098cd341ba451b8099_icgraph" id="nes__hw__functionalities_8h_ad8b34c2fe7b42b098cd341ba451b8099_icgraph">
+<area shape="rect" id="node2" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="156,5,207,32"/>
 </map>
 </div>
 

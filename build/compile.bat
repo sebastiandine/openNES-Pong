@@ -44,11 +44,15 @@ ca65 %MAIN_FILE_NAME%.s
 REM link everything to a .nes file
 ld65 -C nes.cfg -o %BUILD_DIR%\%MAIN_FILE_NAME%.nes reset.o %MAIN_FILE_NAME%.o lib_get_input.o lib_unpack_RLE.o lib_wait_Vblank.o nes.lib
 
-REM TIMEOUT 5
+
 
 ECHO Delete temporary build-directory
 CD %BUILD_DIR%
 RMDIR /q/s %TEMP_DIR% 
+
+REM RENAME MAIN.NES to openNES-Pong.nes
+RENAME main.nes pong.nes
+
 PAUSE
 
 REM run .nes file

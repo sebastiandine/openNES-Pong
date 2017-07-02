@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['play_5fmusic',['play_music',['../nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd',1,'nes_hw_functionalities.h']]],
   ['player_5fhit_5fdetection',['player_hit_detection',['../update_8c.html#a5d9ed04d989de718d624566f65adf16e',1,'update.c']]],
   ['ppu_5fclear_5foam',['ppu_clear_oam',['../nes__hw__functionalities_8c.html#a34c94ebddea4cccf8f46406be1408d84',1,'ppu_clear_oam(void):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#a34c94ebddea4cccf8f46406be1408d84',1,'ppu_clear_oam(void):&#160;nes_hw_functionalities.c']]],
   ['ppu_5fdraw_5fbackground',['ppu_draw_background',['../nes__hw__functionalities_8c.html#aa16e9176ee0d40dc88d3c9da14f6feb8',1,'ppu_draw_background(const unsigned char *bg, unsigned char nametable):&#160;nes_hw_functionalities.c'],['../nes__hw__functionalities_8h.html#aa16e9176ee0d40dc88d3c9da14f6feb8',1,'ppu_draw_background(const unsigned char *bg, unsigned char nametable):&#160;nes_hw_functionalities.c']]],

@@ -2,6 +2,7 @@ var searchData=
 [
   ['paddle_5fhit_5fcount',['paddle_hit_count',['../globals_8h.html#a7176a7a94979e6490bb08f6f11288fb3',1,'globals.h']]],
   ['pause',['pause',['../structplayer__struct.html#af005a22a9f7e1dbfe61f0c4380f5ce83',1,'player_struct']]],
+  ['play_5fmusic',['play_music',['../nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd',1,'nes_hw_functionalities.h']]],
   ['player1',['player1',['../globals_8h.html#aa9a6cff025c15a8ca4fa3c92e66e2690',1,'globals.h']]],
   ['player2',['player2',['../globals_8h.html#ad60138641fdfcf0d0dd8d7605e8e57f7',1,'globals.h']]],
   ['player_5fhit_5fdetection',['player_hit_detection',['../update_8c.html#a5d9ed04d989de718d624566f65adf16e',1,'update.c']]],

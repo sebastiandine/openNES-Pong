@@ -298,3 +298,35 @@ void __fastcall__ wait_Vblank(void);
  * @param count Bytewise size of data bulk.
  */
 void __fastcall__ memcpy (void* dest, const void* src, int count);
+
+/**
+ * @brief This function resets the APU and initializes the FamiTone music engine.
+ *
+ * Everytime you would like to play a new song, first you have the reset the engine, using function
+ * @link reset_music() @endlink, then you have to select the music you would like to play, using
+ * function @link play_music() @endlink. Afterwards you have to update the music processing every
+ * frame, using function @link update_music() @endlink .
+ */
+void __fastcall__ reset_music(void);
+
+/**
+ * @brief This function starts playing the song with the given number in the famitone music file, specifed
+ * in file 'config/reset.s' with label music_data.
+ *
+ * Everytime you would like to play a new song, first you have the reset the engine, using function
+ * @link reset_music() @endlink, then you have to select the music you would like to play, using
+ * function @link play_music() @endlink. Afterwards you have to update the music processing every
+ * frame, using function @link update_music() @endlink .
+ */
+void __fastcall__ play_music(unsigned char song);
+
+/**
+ * This function updates music processing. Call this function once every frame.
+ *
+ * Everytime you would like to play a new song, first you have the reset the engine, using function
+ * @link reset_music() @endlink, then you have to select the music you would like to play, using
+ * function @link play_music() @endlink. Afterwards you have to update the music processing every
+ * frame, using function @link update_music() @endlink .
+ *
+ */
+void __fastcall__ update_music(void);

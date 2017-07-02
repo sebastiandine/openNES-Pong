@@ -103,10 +103,12 @@ void main(void){
             flag_score = 0;
             paddle_hit_count = 0;
 
+            reset_music();
+            play_music(1);
 
             /* Score loop within a match */
             while (!flag_score) {
-
+                update_music();
                 mainloop_input();
 
                 if (!player1.pause && !player2.pause) {
