@@ -1,9 +1,10 @@
 <map id="mainloop_update" name="mainloop_update">
 <area shape="rect" id="node2" href="$update_8c.html#aba4374510db17b9eb700fa0e60d4f31d" title="This function calculates the movement of the ball for the next frame. " alt="" coords="199,5,307,32"/>
 <area shape="rect" id="node3" href="$update_8c.html#ae23c104ab806fc429fc594fa7e764a06" title="This function checks, if the ball hits the upper or lower wall and reverses its angle direction if so..." alt="" coords="190,56,315,83"/>
-<area shape="rect" id="node4" href="$update_8c.html#a5d9ed04d989de718d624566f65adf16e" title="This function checks if the ball hit a players paddle. In case of a hit detection, it calculates the new movement angle of the ball and inverses its direction. See ball_angle for the definition of ball movement angles. " alt="" coords="183,107,322,133"/>
-<area shape="rect" id="node5" href="$update_8c.html#ab60836a2d5e496693f9166c54de21fe2" title="cpu_player2_movement" alt="" coords="173,157,332,184"/>
-<area shape="rect" id="node6" href="$update_8c.html#aaf1f4f26d508712e021fcec52a14e221" title="This function checks, if a player hit a score and in case of a score increases the score count of the..." alt="" coords="195,208,310,235"/>
-<area shape="rect" id="node7" href="$update_8c.html#aba8344030e8567891c25726114c616a9" title="This function updates the single digits which display the score of each player, once one player hits ..." alt="" coords="183,259,322,285"/>
-<area shape="rect" id="node8" href="$update_8c.html#ac54f13441c1d7520b0d59a5cf0677f27" title="This functions checks, if eighter on of the players has won the game. " alt="" coords="189,309,316,336"/>
+<area shape="rect" id="node4" href="$nes__hw__functionalities_8h.html#acab37f2921e3a469ef12d545918ace65" title="This function plays the sound effect with the given number in the famitone sfx file, specified in file &#39;config/reset.s&#39; with label &#39;sounds_data&#39;. " alt="" coords="380,132,499,159"/>
+<area shape="rect" id="node5" href="$update_8c.html#a5d9ed04d989de718d624566f65adf16e" title="This function checks if the ball hit a players paddle. In case of a hit detection, it calculates the new movement angle of the ball and inverses its direction. See ball_angle for the definition of ball movement angles. " alt="" coords="183,157,322,184"/>
+<area shape="rect" id="node6" href="$update_8c.html#ab60836a2d5e496693f9166c54de21fe2" title="cpu_player2_movement" alt="" coords="173,208,332,235"/>
+<area shape="rect" id="node7" href="$update_8c.html#aaf1f4f26d508712e021fcec52a14e221" title="This function checks, if a player hit a score and in case of a score increases the score count of the..." alt="" coords="195,259,310,285"/>
+<area shape="rect" id="node8" href="$update_8c.html#aba8344030e8567891c25726114c616a9" title="This function updates the single digits which display the score of each player, once one player hits ..." alt="" coords="183,309,322,336"/>
+<area shape="rect" id="node9" href="$update_8c.html#ac54f13441c1d7520b0d59a5cf0677f27" title="This functions checks, if eighter on of the players has won the game. " alt="" coords="189,360,316,387"/>
 </map>

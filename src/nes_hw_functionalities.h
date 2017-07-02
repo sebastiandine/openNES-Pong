@@ -310,8 +310,8 @@ void __fastcall__ memcpy (void* dest, const void* src, int count);
 void __fastcall__ reset_music(void);
 
 /**
- * @brief This function starts playing the song with the given number in the famitone music file, specifed
- * in file 'config/reset.s' with label music_data.
+ * @brief This function starts playing the song with the given number in the famitone music file, specified
+ * in file 'config/reset.s' with label 'music_data'.
  *
  * Everytime you would like to play a new song, first you have the reset the engine, using function
  * @link reset_music() @endlink, then you have to select the music you would like to play, using
@@ -330,3 +330,9 @@ void __fastcall__ play_music(unsigned char song);
  *
  */
 void __fastcall__ update_music(void);
+
+/**
+ * @brief This function plays the sound effect with the given number in the famitone sfx file, specified
+ * in file 'config/reset.s' with label 'sounds_data'.
+ */
+void __fastcall__ play_soundeffect(unsigned char effect);

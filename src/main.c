@@ -85,7 +85,6 @@ void main(void){
         wait_Vblank();
         ppu_turn_all_on();
 
-
         /* Match loop */
         while (flag_match) {
             player1.pos_x = 2;
@@ -104,16 +103,17 @@ void main(void){
             paddle_hit_count = 0;
 
             reset_music();
-            play_music(1);
 
             /* Score loop within a match */
             while (!flag_score) {
-                update_music();
+
                 mainloop_input();
 
                 if (!player1.pause && !player2.pause) {
+                    update_music();
                     mainloop_update();
                 }
+
                 wait_until_nmi();
                 mainloop_render();
 

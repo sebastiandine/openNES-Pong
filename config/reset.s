@@ -20,7 +20,7 @@ FT_DPCM_OFF				= $c000		;$c000..$ffc0, 64-byte steps
 FT_SFX_STREAMS			= 1			;number of sound effects played at once, 1..4
 
 .define FT_DPCM_ENABLE  0			;undefine to exclude all DMC code
-.define FT_SFX_ENABLE   0			;undefine to exclude all sound effects code
+.define FT_SFX_ENABLE   1			;undefine to exclude all sound effects code
 
 
 
@@ -91,6 +91,15 @@ MusicInit:			;turns music channels off
     sta	sp
     lda	#>(__STACK_START__+__STACK_SIZE__)
     sta	sp+1            ; Set the c stack pointer
+	
+	lda #1
+	sta NTSC_MODE
+   
+   
+;init sfx
+	ldx #<sounds			;set sound effects data location
+	ldy #>sounds
+	jsr FamiToneSfxInit
 	
 	jsr	copydata
 	jsr	initlib
@@ -181,9 +190,10 @@ irq:
 	.include "lib_famitone2.s"
 
 music_data:
-	.include "TestMusic.s"
+;	.include "music.s"
 
-sound_data:
+sounds_data:
+    .include "sfx.s"
 
 .segment "VECTORS"
 

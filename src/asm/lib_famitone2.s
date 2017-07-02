@@ -1,5 +1,8 @@
 ;FamiTone2 v1.11
+;Some edits where made accoording to the NESDoug tutorial series (https://nesdoug.com/)
 
+
+.export _play_soundeffect
 .export _reset_music, _play_music, _update_music
 
 
@@ -218,10 +221,10 @@ FT_MR_NOISE_F		= FT_OUT_BUF+10
 ;------------------------------------------------------------------------------
 
 _reset_music:
-   lda NTSC_MODE ;not 0 for NTSC
-   ldx #<music_data ;low byte
-   ldy #>music_data ;high byte
-   
+	lda NTSC_MODE ;not 0 for NTSC
+   ldx #<music_data ;low
+   ldy #>music_data ;high
+
 FamiToneInit:
 
 	stx FT_SONG_LIST_L		;store music data pointer for further use
@@ -984,7 +987,7 @@ _FT2SamplePlay:
 	asl a
 	clc
 	adc <FT_TEMP
-	
+
 	adc FT_DPCM_LIST_L
 	sta <FT_TEMP_PTR_L
 	lda #0
@@ -1078,6 +1081,9 @@ _FT2SfxClearChannel:
 ; in: A is a number of the sound effect
 ;     X is offset of sound effect channel, should be FT_SFX_CH0..FT_SFX_CH3
 ;------------------------------------------------------------------------------
+
+_play_soundeffect:
+	ldx #0
 
 FamiToneSfxPlay:
 

@@ -6,7 +6,7 @@
 This is the second entry of the openNES project series which aims to rebuild classic video games for the Nintendo 
 Entertainment System, on an open source basis.
 The purpose of these projects is to get more enthusiastic people into programming for the NES by providing code examples
-and a starting points for making new games from the scratch.
+and a starting point for making new games from the scratch.
 
 
 
@@ -32,6 +32,8 @@ This project is licensed under the zlib license. See also the attached LICENSE f
 
 * [FamiTracker v.0.4.2](http://famitracker.com) - Famous tracker for producing music for the NES/Famicom-systems
 
+* [FamiTone2 v.1.15](https://shiru.untergrund.net/code.shtml) - Lightweight Audio library for music and sound effects. 
+
 * [Doxygen v.1.8.12](http://www.stack.nl/~dimitri/doxygen/) - Code documentation tool for C/C++ projects
 
 * [FCEUX v.2.2.3](http://www.fceux.com/web/home.html) - Famous NES emulator in the homebrew scene with many debugging utilities.
@@ -44,7 +46,7 @@ This project is licensed under the zlib license. See also the attached LICENSE f
 
 
 ## How-To Built
-To build the software into an .NES rom, you need to have installed cc65 on your local machine in order to run the script `build/build.bat` for Windows based systems. You always find a build of the master-branch at `build/snake.nes`.
+To build the software into an .NES rom, you need to have installed cc65 on your local machine in order to run the script `build/build.bat` for Windows based systems. You always find a build of the master-branch at `build/pong.nes`.
 
 ## Notes for Contributors
 Feel free to fork this project and extend its content. If you find bugs, please submit them as issues so we can discuss together how you can fix them. 

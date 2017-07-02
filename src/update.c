@@ -85,6 +85,7 @@ void player_hit_detection(void){
                                                                    right end of player2.*/
 
             ++paddle_hit_count; /* increase paddle hit count in order to calculate the balls speed */
+            play_soundeffect(2);
 
             /*
              * In order to make hit detection with paddles easier. We assume, that each paddle is 7 pixels larger
@@ -156,7 +157,7 @@ void player_hit_detection(void){
                                                                           left end of player1.*/
 
             ++paddle_hit_count; /* increase paddle hit count in order to calculate the balls speed */
-
+            play_soundeffect(2);
 
             if((ball.pos_y >= (player1.pos_y + 5)) && (ball.pos_y <= (player1.pos_y + 11))){        /* horizontal angle */
                 ball.dir = RIGHT;
@@ -299,6 +300,7 @@ void mainloop_update(void){
     /* hit detection */
     wall_hit_detection();
     if(flag_wall_hit){
+        play_soundeffect(1);
         flag_wall_hit = 0;
     }
     else{
@@ -313,6 +315,7 @@ void mainloop_update(void){
     /* score detection */
     score_detection();
     if(flag_score){
+        play_soundeffect(0);
         update_score_digits();
         game_over_check();
         return;

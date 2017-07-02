@@ -28,6 +28,7 @@ var nes__hw__functionalities_8h =
     [ "load_background_collision_map", "nes__hw__functionalities_8h.html#a3b0640509d7e01bf4f82a8473fbbe139", null ],
     [ "memcpy", "nes__hw__functionalities_8h.html#a3d38c0d50bdfde3f95c5a66e9ed68af7", null ],
     [ "play_music", "nes__hw__functionalities_8h.html#a3dbcf79df7fa03ec1fb990745a030ccd", null ],
+    [ "play_soundeffect", "nes__hw__functionalities_8h.html#acab37f2921e3a469ef12d545918ace65", null ],
     [ "ppu_clear_oam", "nes__hw__functionalities_8h.html#a34c94ebddea4cccf8f46406be1408d84", null ],
     [ "ppu_draw_background", "nes__hw__functionalities_8h.html#aa16e9176ee0d40dc88d3c9da14f6feb8", null ],
     [ "ppu_load_bg_palette", "nes__hw__functionalities_8h.html#a28fac451801dbe866d2cade3d80476a3", null ],
