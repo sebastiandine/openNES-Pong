@@ -1,4 +1,0 @@
-<map id="render_game_over_screen" name="render_game_over_screen">
-<area shape="rect" id="node2" href="$render_8c.html#aedd9dc656adabee0aaa1887fdc431544" title="This function orchestrates all rendering functions and encapsulates them to the main loop..." alt="" coords="227,5,344,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="392,5,443,32"/>
-</map>

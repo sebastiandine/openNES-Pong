@@ -1,3 +1,0 @@
-<map id="player_hit_detection" name="player_hit_detection">
-<area shape="rect" id="node2" href="$nes__hw__functionalities_8h.html#acab37f2921e3a469ef12d545918ace65" title="This function plays the sound effect with the given number in the famitone sfx file, specified in file &#39;config/reset.s&#39; with label &#39;sounds_data&#39;. " alt="" coords="192,5,311,32"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="play_soundeffect" name="play_soundeffect">
-<area shape="rect" id="node2" href="$update_8c.html#a5d9ed04d989de718d624566f65adf16e" title="This function checks if the ball hit a players paddle. In case of a hit detection, it calculates the new movement angle of the ball and inverses its direction. See ball_angle for the definition of ball movement angles. " alt="" coords="172,5,311,32"/>
-<area shape="rect" id="node3" href="$update_8c.html#a31c8504e7fe9671dbda52ba62a382b1f" title="This function orchestrates all update functions and encapsulates them to the main loop..." alt="" coords="359,31,479,57"/>
-<area shape="rect" id="node4" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="527,31,577,57"/>
-</map>

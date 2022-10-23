@@ -1,4 +1,0 @@
-<map id="gamepad1_input_handling" name="gamepad1_input_handling">
-<area shape="rect" id="node2" href="$input_8c.html#aead3a23bfbe8bc1f6e73cf1ae0cd5876" title="This function orchestrates all input handling functions and encapsulates them to the main loop..." alt="" coords="225,5,335,32"/>
-<area shape="rect" id="node3" href="$main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="383,5,433,32"/>
-</map>
